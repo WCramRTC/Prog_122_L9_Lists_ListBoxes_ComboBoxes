@@ -33,13 +33,20 @@ namespace Prog_122_L9_Lists_ListBoxes_ComboBoxes
         List<string> studentsFavoriteColors = new List<string>();
         List<string> studentNames = new List<string>();
 
+        List<Color> colorsList = new List<Color>();
         public MainWindow()
         {
             InitializeComponent();
             Preload(); // Call preload to load lists at start of application
             DisplayList(studentNames);
-     
-            
+
+            // ListBox - Names LBoxNames
+            // .ItemsSource what we connect our collection to
+            lBoxNames.ItemsSource = studentNames;
+
+            // ComboBox - cbxColors
+            // add the list of students favorite colors
+            cbxColors.ItemsSource = studentsFavoriteColors;
         
         } // MainWindow
 
@@ -63,6 +70,14 @@ namespace Prog_122_L9_Lists_ListBoxes_ComboBoxes
             studentsFavoriteColors.Add("Manjula - Red");
             studentsFavoriteColors.Add("Will - White");
 
+            colorsList.Add(Colors.Black);
+            colorsList.Add(Colors.Orange);
+            colorsList.Add(Colors.Green);
+            colorsList.Add(Colors.Pink);
+            colorsList.Add(Colors.Purple);
+            colorsList.Add(Colors.AliceBlue);
+            colorsList.Add(Colors.Red);
+            colorsList.Add(Colors.White);
 
             studentsFavoriteColors.Remove("Will - white");
             // Adding names to my student list
@@ -152,6 +167,17 @@ namespace Prog_122_L9_Lists_ListBoxes_ComboBoxes
 
             //rtbDisplay.Text = "Hafsa's favorite color is black";
             //rtbDisplay.Text += "\nMatthew's favorite color is orange";
+        }
+
+        private void btnDisplaySelected_Click(object sender, RoutedEventArgs e)
+        {
+            int selectedIndexColors = cbxColors.SelectedIndex;
+
+            //string selectedItemName = lBoxNames.SelectedItem.ToString();
+
+            canvasDisplay.Background = new SolidColorBrush(colorsList[selectedIndexColors]);
+
+             //MessageBox.Show($"{selectedIndexColors} {selectedItemName}");
         }
 
         // A Collection in programming is any

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Prog_122_L9_Lists_ListBoxes_ComboBoxes"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Canvas Background="#FFD08989">
+    <Canvas x:Name="canvasDisplay" Background="#FFD08989">
         <RichTextBox HorizontalAlignment="Left" VerticalAlignment="Center" Width="346" Height="244" Canvas.Left="414" Canvas.Top="73">
             <FlowDocument>
                 <Paragraph>
@@ -14,10 +14,11 @@
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        
+
         <ListBox x:Name="lBoxNames" Height="217" Width="343" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="38" Canvas.Top="30"/>
-        
+
         <ComboBox x:Name="cbxColors" Canvas.Left="38" Canvas.Top="303" Width="343" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Button x:Name="btnDisplaySelected" Content="Display Selected Index" Canvas.Left="84" Canvas.Top="357" HorizontalAlignment="Left" VerticalAlignment="Top" Width="297" Click="btnDisplaySelected_Click"/>
 
     </Canvas>
 </Window>
