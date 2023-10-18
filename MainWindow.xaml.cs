@@ -31,6 +31,15 @@ namespace Prog_122_L9_Lists_ListBoxes_ComboBoxes
 
         // Array or List
 
+        // List<type> listName = new List<type>();
+        // Create a list of student names
+        // We need to keep track of a first and a last name
+        List<string> studentNames = new List<string>();
+
+        // Add
+        // Access a single elements
+        // Remove
+
     } // class
 
 } // namespace

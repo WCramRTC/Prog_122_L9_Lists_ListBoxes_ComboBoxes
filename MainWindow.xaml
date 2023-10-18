@@ -6,7 +6,14 @@
         xmlns:local="clr-namespace:Prog_122_L9_Lists_ListBoxes_ComboBoxes"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Canvas>
+        <RichTextBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="508" Height="244" Canvas.Left="146" Canvas.Top="73">
+            <FlowDocument>
+                <Paragraph>
+                    <Run x:Name="rtbDisplay" Text="change this"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
 
-    </Grid>
+    </Canvas>
 </Window>
