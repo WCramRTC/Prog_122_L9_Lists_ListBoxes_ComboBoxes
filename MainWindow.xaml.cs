@@ -31,6 +31,7 @@ namespace Prog_122_L9_Lists_ListBoxes_ComboBoxes
         // Juan - Light cornflower blue
         // Manjula - Red
         List<string> studentsFavoriteColors = new List<string>();
+        List<string> studentNames = new List<string>();
 
         public MainWindow()
         {
@@ -53,22 +54,73 @@ namespace Prog_122_L9_Lists_ListBoxes_ComboBoxes
             studentsFavoriteColors.Add("Juan - Light Cornflower Blue");
             studentsFavoriteColors.Add("Manjula - Red");
             studentsFavoriteColors.Add("Will - White");
+            // Adding names to my student list
+            studentNames.Add("Dylan");
+            studentNames.Add("Kristyn");
+            studentNames.Add("Hannah");
 
-            // 10
+
+            // Display List
+            DisplayList();
+
+
+
+
 
             // Get the .Count
-            rtbDisplay.Text = "";
-            
+            //rtbDisplay.Text = "";
+
             //for(int i = 0; i < listOfDoubles.Length ; i++)
             //{
             //    rtbDisplay.Text += i + " : " + listOfDoubles[i] + "\n";
             //}
 
-
         } // MainWindow
+
+        // Method will display my list of colors to my rich text box
+        public void DisplayList()
+        {
+            rtbDisplay.Text = ""; // This will clear the text box
+
+            for (int i = 0; i < studentsFavoriteColors.Count; i++)
+            {
+                string currentColor = studentsFavoriteColors[i];
+                rtbDisplay.Text += currentColor + "\n";
+            }
+
+        } // DisplayList()
+
+        public void DisplayList(List<string> list)
+        {
+            rtbDisplay.Text = ""; // This will clear the text box
+
+            for (int i = 0; i < studentsFavoriteColors.Count; i++)
+            {
+                string currentColor = studentsFavoriteColors[i];
+                rtbDisplay.Text += currentColor + "\n";
+            }
+        }
+
+        // Refactor our code to make our method more efficent
 
         public void ExampleCode()
         {
+            List<bool> bools = new List<bool>();
+            bools.Add(true);
+            bools.Add(true);
+            bools.Add(true);
+            bools.Add(true);
+            bools.Add(true);
+            bools.Add(true);
+            bools.Add(true);
+            bools.Add(true);
+            bools.Add(true);
+
+
+            rtbDisplay.Text = "Count : " + bools.Count + "\n";
+            rtbDisplay.Text += "Capacity : " + bools.Capacity;
+
+
             bool[] listOfDoubles = new bool[10];
 
 
@@ -87,7 +139,7 @@ namespace Prog_122_L9_Lists_ListBoxes_ComboBoxes
         // List<type> listName = new List<type>();
         // Create a list of student names
         // We need to keep track of a first and a last name
-        List<string> studentNames = new List<string>();
+
 
         // Add
         // Access a single elements

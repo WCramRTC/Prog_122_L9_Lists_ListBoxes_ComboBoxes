@@ -10,7 +10,7 @@
         <RichTextBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="508" Height="244" Canvas.Left="146" Canvas.Top="73">
             <FlowDocument>
                 <Paragraph>
-                    <Run x:Name="rtbDisplay" Text="change this"/>
+                    <Run x:Name="rtbDisplay"/>
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
