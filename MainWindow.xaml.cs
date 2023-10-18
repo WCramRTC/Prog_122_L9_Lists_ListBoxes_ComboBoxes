@@ -36,7 +36,15 @@ namespace Prog_122_L9_Lists_ListBoxes_ComboBoxes
         public MainWindow()
         {
             InitializeComponent();
+            Preload(); // Call preload to load lists at start of application
+            DisplayList(studentNames);
+     
+            
+        
+        } // MainWindow
 
+        public void Preload()
+        {
             // A list uses indexs
             // A collection always STARTS at 0
 
@@ -45,7 +53,7 @@ namespace Prog_122_L9_Lists_ListBoxes_ComboBoxes
             // To add to a list, you do listName.Add(object)
             // .Add()
             // When you ADD an item to the list, it add's it one after another
-                                                           // Index    Element
+            // Index    Element
             studentsFavoriteColors.Add("Hafsa - Black"); //     0        1 
             studentsFavoriteColors.Add("Matthew - Orange"); //  1        2
             studentsFavoriteColors.Add("Benel - Green"); //     2        3
@@ -54,28 +62,14 @@ namespace Prog_122_L9_Lists_ListBoxes_ComboBoxes
             studentsFavoriteColors.Add("Juan - Light Cornflower Blue");
             studentsFavoriteColors.Add("Manjula - Red");
             studentsFavoriteColors.Add("Will - White");
+
+
+            studentsFavoriteColors.Remove("Will - white");
             // Adding names to my student list
             studentNames.Add("Dylan");
             studentNames.Add("Kristyn");
             studentNames.Add("Hannah");
-
-
-            // Display List
-            DisplayList();
-
-
-
-
-
-            // Get the .Count
-            //rtbDisplay.Text = "";
-
-            //for(int i = 0; i < listOfDoubles.Length ; i++)
-            //{
-            //    rtbDisplay.Text += i + " : " + listOfDoubles[i] + "\n";
-            //}
-
-        } // MainWindow
+        }
 
         // Method will display my list of colors to my rich text box
         public void DisplayList()
@@ -92,11 +86,28 @@ namespace Prog_122_L9_Lists_ListBoxes_ComboBoxes
 
         public void DisplayList(List<string> list)
         {
+            //rtbDisplay.Text = ""; // This will clear the text box
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                string currentColor = list[i];
+                rtbDisplay.Text += currentColor + "\n";
+            }
+        }
+
+        public void DisplayList(List<string> list1, List<string> list2)
+        {
             rtbDisplay.Text = ""; // This will clear the text box
 
-            for (int i = 0; i < studentsFavoriteColors.Count; i++)
+            for (int i = 0; i < list1.Count; i++)
             {
-                string currentColor = studentsFavoriteColors[i];
+                string currentColor = list1[i];
+                rtbDisplay.Text += currentColor + "\n";
+            }
+
+            for (int i = 0; i < list2.Count; i++)
+            {
+                string currentColor = list2[i];
                 rtbDisplay.Text += currentColor + "\n";
             }
         }
@@ -115,7 +126,20 @@ namespace Prog_122_L9_Lists_ListBoxes_ComboBoxes
             bools.Add(true);
             bools.Add(true);
             bools.Add(true);
+            // Get the .Count
+            //rtbDisplay.Text = "";
 
+            //for(int i = 0; i < listOfDoubles.Length ; i++)
+            //{
+            //    rtbDisplay.Text += i + " : " + listOfDoubles[i] + "\n";
+            //}
+
+
+            // Display List
+            //DisplayList();
+            DisplayList(studentNames);
+            rtbDisplay.Text = "";
+            DisplayList(studentsFavoriteColors);
 
             rtbDisplay.Text = "Count : " + bools.Count + "\n";
             rtbDisplay.Text += "Capacity : " + bools.Capacity;
