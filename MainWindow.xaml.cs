@@ -20,10 +20,63 @@ namespace Prog_122_L9_Lists_ListBoxes_ComboBoxes
     /// </summary>
     public partial class MainWindow : Window
     {
+        // New of Students Favorite colors
+
+
+        // Hafsa - Black
+        // Matthew - Orange
+        // Benel - Green
+        // David -  pink
+        // Kira - Purple
+        // Juan - Light cornflower blue
+        // Manjula - Red
+        List<string> studentsFavoriteColors = new List<string>();
+
         public MainWindow()
         {
             InitializeComponent();
+
+            // A list uses indexs
+            // A collection always STARTS at 0
+
+
+
+            // To add to a list, you do listName.Add(object)
+            // .Add()
+            // When you ADD an item to the list, it add's it one after another
+                                                           // Index    Element
+            studentsFavoriteColors.Add("Hafsa - Black"); //     0        1 
+            studentsFavoriteColors.Add("Matthew - Orange"); //  1        2
+            studentsFavoriteColors.Add("Benel - Green"); //     2        3
+            studentsFavoriteColors.Add("David - Pink ");
+            studentsFavoriteColors.Add("Kira - Purple");
+            studentsFavoriteColors.Add("Juan - Light Cornflower Blue");
+            studentsFavoriteColors.Add("Manjula - Red");
+            studentsFavoriteColors.Add("Will - White");
+
+            // 10
+
+            // Get the .Count
+            rtbDisplay.Text = "";
+            
+            //for(int i = 0; i < listOfDoubles.Length ; i++)
+            //{
+            //    rtbDisplay.Text += i + " : " + listOfDoubles[i] + "\n";
+            //}
+
+
         } // MainWindow
+
+        public void ExampleCode()
+        {
+            bool[] listOfDoubles = new bool[10];
+
+
+            //rtbDisplay.Text = studentsFavoriteColors[6];
+
+            //rtbDisplay.Text = "Hafsa's favorite color is black";
+            //rtbDisplay.Text += "\nMatthew's favorite color is orange";
+        }
 
         // A Collection in programming is any
         // Data Structure that holds multiple
